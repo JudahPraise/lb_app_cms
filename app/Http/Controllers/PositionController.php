@@ -98,7 +98,6 @@ class PositionController extends Controller
         SetQualification::where('position_id','=',$id)->delete();
         SetSkill::where('position_id','=',$id)->delete();
         Position::where('id','=',$id)->delete();
-        // Position::where('id','=',$id)->with('qualifications','skills')->delete();
         return redirect()->back()->with('delete', 'Position deleted!');
     }
 }

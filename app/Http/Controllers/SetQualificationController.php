@@ -50,7 +50,7 @@ class SetQualificationController extends Controller
                 'position_id' => $id,
                 'qualification_id' => $request->qualification_id[$item],
                 'qualified_option' => $request->qualified_option[$item],
-                'point' => 1,
+                'point' => $request->point[$item],
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);

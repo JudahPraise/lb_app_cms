@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('guest-page.landing-page');
+})->name('welcome');
 
 Auth::routes();
 
@@ -75,4 +75,9 @@ Route::prefix('/interview')->group(function(){
     //Set Interview Schedule
     Route::get('/schedule/{id}',  [App\Http\Controllers\SetScheduleController::class, 'show'])->name('setSchedule.show');
     Route::get('/set-schedule/{id}',  [App\Http\Controllers\SetScheduleController::class, 'create'])->name('setSchedule.create');
+});
+
+//Registration
+Route::prefix('/register')->group(function(){
+    Route::get('/', [App\Http\Controllers\RegistrationController::class, 'index'])->name('register.index');
 });

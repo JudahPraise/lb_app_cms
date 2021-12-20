@@ -21,6 +21,7 @@
                         <input type="text" name="qualification_id[]" value="{{ $qualification->id }}" hidden>
                         @foreach ($qualification->options as $option)
                             <div class="form-check">
+                                <input type="number" name="point[]" value="{{ $loop->iteration/$loop->count*100 }}" hidden>
                                 <input class="form-check-input" type="checkbox" name="qualified_option[]" id="exampleRadios1" value="{{ $option }}">
                                 <label class="form-check-label" for="exampleRadios1">
                                   {{ $option }}

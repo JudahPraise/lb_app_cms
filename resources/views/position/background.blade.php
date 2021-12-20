@@ -5,8 +5,9 @@
         <span>
             <strong>{{ $data->qualification->title }}</strong>
         </span>
-        <span class="ml-3 font-italic">
+        <span class="ml-3 font-italic d-flex justify-content-between">
              <strong class="text-danger">*Qualified: <span class="text-dark">{{ $data->qualified_option }}</span></strong>
+            <strong>{{ $data->point }}</strong>
         </span>
         <span>
             <ul>
@@ -23,4 +24,8 @@
             </div>
         </a>
     @endforelse
+    <div class="row p-3 d-flex justify-content-between">
+        <strong>Qualified points:</strong>
+        <strong>{{ $qualified->sum('point') }}</strong>
+    </div>
 @endsection

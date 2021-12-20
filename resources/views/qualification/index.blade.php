@@ -59,39 +59,39 @@
     </div>
     <!-- Modal Add -->
     <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Qualification</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                  <form action="{{ route('qualification.store') }}" method="POST" id="qualificationAdd"> 
-                    @csrf
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Qulification Title</label>
-                        <input type="text" class="form-control" name="title" id="exampleInputEmail1">
-                      </div>
-                      <div class="form-group inputs_div">
-                          <div class="form-row mb-3 d-flex align-items-end">
-                              <div class="col-8">
-                                  <label for="exampleInputEmail1">Qualified Option</label>
-                                  <small class="text-success font-italic"><span class="text-danger">*</span>Start from least</small>
-                                  <input type="text" class="form-control" name="options[]" id="exampleInputEmail1">
-                              </div>
-                              <button type="button" class="btn btn-success add">Add option</button>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="document.getElementById('qualificationAdd').submit()">Save changes</button>
-              </div>
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Qualification</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-        </div>
+            <div class="modal-body">
+                <form action="{{ route('qualification.store') }}" method="POST" id="qualificationAdd"> 
+                  @csrf
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Qulification Title</label>
+                      <input type="text" class="form-control" name="title" id="exampleInputEmail1">
+                    </div>
+                    <div class="form-group inputs_div">
+                        <div class="form-row mb-3 d-flex align-items-end">
+                            <div class="col-8">
+                                <label for="exampleInputEmail1">Qualified Option</label>
+                                <small class="text-success font-italic"><span class="text-danger">*</span>Start from least</small>
+                                <input type="text" class="form-control" name="options[]" id="exampleInputEmail1">
+                            </div>
+                            <button type="button" class="btn btn-success add">Add option</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="document.getElementById('qualificationAdd').submit()">Save changes</button>
+            </div>
+          </div>
+      </div>
     </div>
     <!-- Delete Modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
